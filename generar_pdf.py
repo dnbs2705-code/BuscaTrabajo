@@ -89,5 +89,5 @@ def markdown_a_pdf(archivo_md, archivo_pdf):
     print(f"✅ PDF generado exitosamente: {archivo_pdf}")
 
 if __name__ == "__main__":
-    markdown_a_pdf("cv_maestro.md", "CV_Rosa_Marin_ATS.pdf")
     markdown_a_pdf("cv_santiago.md", "CV_Santiago_ATS.pdf")
+    markdown_a_pdf("cv_rosa.md", "CV_Rosa_Marin_ATS.pdf")
