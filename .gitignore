@@ -1,0 +1,4 @@
+cvs_originales/
+datos/
+.env
+__pycache__/
