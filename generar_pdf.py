@@ -89,5 +89,14 @@ def markdown_a_pdf(archivo_md, archivo_pdf):
     print(f"✅ PDF generado exitosamente: {archivo_pdf}")
 
 if __name__ == "__main__":
-    markdown_a_pdf("cv_santiago.md", "CV_Santiago_ATS.pdf")
-    markdown_a_pdf("cv_rosa.md", "CV_Rosa_Marin_ATS.pdf")
+    import sys
+    
+    # Si le pasas un archivo específico en la terminal (ej: py generar_pdf.py cv_rosa.md)
+    if len(sys.argv) > 1:
+        archivo_entrada = sys.argv[1]
+        archivo_salida = archivo_entrada.replace(".md", ".pdf")
+        markdown_a_pdf(archivo_entrada, archivo_salida)
+    else:
+        # Si ejecutas 'py generar_pdf.py' sin argumentos, genera ambos
+        markdown_a_pdf("cv_santiago.md", "CV_Santiago_ATS.pdf")
+        markdown_a_pdf("cv_rosa.md", "CV_Rosa_Marin_ATS.pdf")
